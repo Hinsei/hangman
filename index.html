@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+  </head>
+  <body>
+    <form id="form">
+      <input type="text" id="value">
+      <input type="text" id="value2">
+    </form>
+    <p id="container"></p>
+    <button id="button">Submit</button>
+    <script>
+      let button = document.getElementById("button")
+      button.addEventListener("click", function() {
+        let value1 = parseInt(document.getElementById("value").value)
+        let value2 = parseInt(document.getElementById("value2").value)
+        let totalValue = value1 + value2
+        
+        let container = document.getElementById("container")
+        container.innerHTML = totalValue
+      })
+    </script>
+  </body>
+</html>
